@@ -14,7 +14,7 @@ public class Main {
                 new Bicycle("bicyvle1", 2),
                 new Bicycle("bicycle2", 2),
         };
-        ServiceStation serviceStation = new ServiceStation();
+        ServiceStationForMe serviceStation = new ServiceStation();
 
         Transport[] transport = new Transport[cars.length + trucks.length + bicycle.length];
         for (int i = 0; i < cars.length; i++) {
@@ -32,7 +32,7 @@ public class Main {
 
     }
 
-    private static void printReport(ServiceStation serviceStation, Car[] cars, Bicycle[] bicycle, Truck[] trucks) {
+    private static void printReport(ServiceStationForMe serviceStation, Car[] cars, Bicycle[] bicycle, Truck[] trucks) {
         serviceStation.check(cars[0], bicycle[0], trucks[0]);
         serviceStation.check(cars[1], bicycle[1], trucks[1]);
         serviceStation.check(null, bicycle[0], null);
